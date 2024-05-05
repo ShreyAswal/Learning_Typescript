@@ -2,3 +2,5 @@
 *.js
 # Ignore map files
 *.js.map
+# Ignore dist folder
+/dist/
