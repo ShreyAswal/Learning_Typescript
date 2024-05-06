@@ -1,2 +1,4 @@
-// Let and const get converted to var in the compiled js file
-var a: number = 20;
+let age: number = 20;
+if(age < 50)
+    age += 10;
+console.log(age);
