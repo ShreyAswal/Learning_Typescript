@@ -27,7 +27,20 @@
 // Enums - To represent a list of related constants
 // PascalCase - First letter of each word is capitalized
 // Using const in const enum to generate more optimized code in index.js
-const enum Size {Small = 1, Medium, Large}
-let mySize = Size.Medium;
-console.log(mySize); // 2
+// const enum Size {Small = 1, Medium, Large}
+// let mySize = Size.Medium;
+// console.log(mySize); // 2
 
+// Functions
+// Really strict syntax in typescript to avoid errors in future
+// 3 config settings enabled for functions - 
+// noUnusedLocals(checks for variables not being used), noUnusedParameters(checks for parameters not being used), noImplicitReturns(checks if the returned value is of the correct datatype)
+// Data type of parameters and return type is useful to avoid errors and a default value can be provided to the parameters.
+function calculateTax(income: number, taxYear = 2021): number{
+    if(taxYear < 2022){
+        console.log(income * 1.2);
+        return income * 1.3;}
+    return income;
+}
+// No additional parameters can be passed to the function, they can avoid a parameter if it has a default value
+calculateTax(10_000)
