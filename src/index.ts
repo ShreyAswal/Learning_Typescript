@@ -33,14 +33,30 @@
 
 // Functions
 // Really strict syntax in typescript to avoid errors in future
-// 3 config settings enabled for functions - 
+// 3 config settings enabled for functions -
 // noUnusedLocals(checks for variables not being used), noUnusedParameters(checks for parameters not being used), noImplicitReturns(checks if the returned value is of the correct datatype)
 // Data type of parameters and return type is useful to avoid errors and a default value can be provided to the parameters.
-function calculateTax(income: number, taxYear = 2021): number{
-    if(taxYear < 2022){
-        console.log(income * 1.2);
-        return income * 1.3;}
-    return income;
-}
-// No additional parameters can be passed to the function, they can avoid a parameter if it has a default value
-calculateTax(10_000)
+// function calculateTax(income: number, taxYear = 2021): number{
+//     if(taxYear < 2022){
+//         console.log(income * 1.2);
+//         return income * 1.3;}
+//     return income;
+// }
+// // No additional parameters can be passed to the function, they can avoid a parameter if it has a default value
+// calculateTax(10_000)
+
+// Objects
+let employee: {
+  id: number;
+  name: string;
+  return: (date: Date) => void;
+} = {
+  id: 1,
+  name: "Shrey",
+  return: (date: Date) => {
+    console.log(date);
+    console.log(employee.name);
+  },
+};
+employee.name = `Rahul`;
+employee.return(new Date());
