@@ -45,12 +45,30 @@
 // // No additional parameters can be passed to the function, they can avoid a parameter if it has a default value
 // calculateTax(10_000)
 
-// Objects
-let employee: {
+// // Objects
+// let employee: {
+//   id: number;
+//   name: string;
+//   return: (date: Date) => void;
+// } = {
+//   id: 1,
+//   name: "Shrey",
+//   return: (date: Date) => {
+//     console.log(date);
+//     console.log(employee.name);
+//   },
+// };
+// employee.name = `Rahul`;
+// employee.return(new Date());
+
+// Type Aliases - TTo reuse the type definitioninstead of creating it again and again
+type Employee = {
   id: number;
   name: string;
   return: (date: Date) => void;
-} = {
+};
+
+let employee: Employee = {
   id: 1,
   name: "Shrey",
   return: (date: Date) => {
@@ -58,5 +76,3 @@ let employee: {
     console.log(employee.name);
   },
 };
-employee.name = `Rahul`;
-employee.return(new Date());
