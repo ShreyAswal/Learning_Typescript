@@ -62,17 +62,31 @@
 // employee.return(new Date());
 
 // Type Aliases - TTo reuse the type definitioninstead of creating it again and again
-type Employee = {
-  id: number;
-  name: string;
-  return: (date: Date) => void;
-};
+// type Employee = {
+//   id: number;
+//   name: string;
+//   return: (date: Date) => void;
+// };
 
-let employee: Employee = {
-  id: 1,
-  name: "Shrey",
-  return: (date: Date) => {
-    console.log(date);
-    console.log(employee.name);
-  },
-};
+// let employee: Employee = {
+//   id: 1,
+//   name: "Shrey",
+//   return: (date: Date) => {
+//     console.log(date);
+//     console.log(employee.name);
+//   },
+// };
+
+// Union Types - To allow multiple types for a variable
+// Union type is not a part of compiled js code it's purely for the compiler to typecheck.
+function kgToLbs(weight: number | string) {
+  // Type Guard - To check the type of the variable , narrowing down the types
+  if(typeof weight === 'number')
+    return weight * 2.2;
+  else 
+    return parseInt(weight) * 2.2;
+  
+}
+
+kgToLbs(50);
+kgToLbs("50kg");
